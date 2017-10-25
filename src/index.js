@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter} from 'react-router-dom';
+
 import App from './App';
 
 import 'bootstrap/dist/css/bootstrap.css';
@@ -20,6 +22,12 @@ window.Popper = require('popper.js').default;
 // ES6 import does not work it throws error: Missing jQuery
 // using Node.js style import works without problems
 require('bootstrap');
+require('jquery.easing');
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById('root')
+);
 registerServiceWorker();

@@ -36,7 +36,6 @@ export default function NavbarMessage(props) {
           time={NavbarMessageItem.time}
           message={NavbarMessageItem.message}
         />
-        <div className="dropdown-divider"/>
       </div>
     );
   });
@@ -55,6 +54,7 @@ export default function NavbarMessage(props) {
       <div className="dropdown-menu" aria-labelledby="messagesDropdown">
         <h6 className="dropdown-header">New Messages:</h6>
         {NavbarMessageItems}
+        <div className="dropdown-divider"/>
         <a className="dropdown-item small" href="#">View all messages</a>
       </div>
     </li>
